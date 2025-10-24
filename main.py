@@ -1,8 +1,39 @@
-from InquirerPy import inquirer
+from InquirerPy import prompt, inquirer
 
-license = inquirer.select(
-    message = "Which License would you like to choose?:",
-    choices = ["MIT License", "Apache License 2.0", "GPL v3", "BSD 3-Clause License", "Unlicensed / All Rights Reserved"], ).execute()
 
-print(license)
+questions  = [
+
+    {"type": "input", "message": "Project Title:", "name": "project_title"},
+
+    {"type": "input", "message": "description", "name": "description"},
+
+    {"type": "input", "message": "Installation Instructions:", "name": "install_info"},
+
+    {"type": "input", "message": "Usage Information", "name": "usage_info"},
+    
+    {
+        "type": "list",
+        "message": "Which License would you like to choose?:", "name": "license",
+        "choices": ["MIT License", "Apache License 2.0", "GPL v3", "BSD 3-Clause License", "Unlicensed / All Rights Reserved"],
+    },
+
+    {"type": "input", "message": "Author Name:", "name": "author_name"},
+
+    {"type": "input", "message": "Contact Information:", "name": "contact_info"},
+]  
+
+
+result = prompt(questions)
+print(f'Project Title: {result["project_title"]}')
+print(f'Description: {result["description"]}')
+print(f'Installation Instructions: {result["install_info"]}')
+print(f'Usage Information {result["usage_info"]}')
+print(f'License: {result["license"]}')
+print(f'Author: {result["author_name"]}')
+print(f'Contact information: {result["contact_info"]}')
+
+
+
+
+
 
