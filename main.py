@@ -1,5 +1,14 @@
 from InquirerPy import prompt, inquirer
+from pathlib import Path
 
+script_path = Path(__file__)
+
+output_file_directory = script_path.resolve().parent
+
+output_file = output_file_directory / "README.md"
+
+with open(output_file, 'w') as file:
+    file.write('some text')
 
 questions  = [
 
@@ -20,6 +29,8 @@ questions  = [
     {"type": "input", "message": "Author Name:", "name": "author_name"},
 
     {"type": "input", "message": "Contact Information:", "name": "contact_info"},
+
+     {"type": "confirm", "message": "Confirm?"},
 ]  
 
 
