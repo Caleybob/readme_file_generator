@@ -1,4 +1,4 @@
-### README.md Generator
+# README.md Generator
 
 ## Description
 
@@ -8,10 +8,10 @@ This project generates README.md files with user input through InquirerPy (this 
 
 Leave a blank input on any section you don't want to use.
 
-# License Information
+### License Information
 
 This project is not licensed. All rights reserved.
 
-# Author
+### Author
 
 By Caolan Boyce

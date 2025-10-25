@@ -50,7 +50,7 @@ class ReadmeGenerator:
 
         if result["project_title"]:
             with open(output_file, "a", encoding="utf-8") as file:
-                file.write(f'### {result["project_title"]}')
+                file.write(f'# {result["project_title"]}')
 
         if result["description"]:
             with open(output_file, "a", encoding="utf-8") as file:
@@ -72,19 +72,19 @@ class ReadmeGenerator:
 
         with open(output_file, "a", encoding="utf-8") as file:
             file.write("\n\n")
-            file.write("# License Information\n\n")
+            file.write("### License Information\n\n")
             file.write(self.license_texts.get(result["license"]))
    
         if result["author_name"]:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write("\n\n")
-                file.write("# Author\n\n")
+                file.write("### Author\n\n")
                 file.write(f'By {result["author_name"]}')
 
         if result["contact_info"]:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write("\n\n")
-                file.write("# Contact Information\n\n")
+                file.write("### Contact Information\n\n")
                 file.write(f'By {result["contact_info"]}')
 
 
