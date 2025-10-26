@@ -85,7 +85,7 @@ class ReadmeGenerator:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write("\n\n")
                 file.write("### Contact Information\n\n")
-                file.write(f'By {result["contact_info"]}')
+                file.write(f'{result["contact_info"]}')
 
 
 if __name__ == "__main__":
